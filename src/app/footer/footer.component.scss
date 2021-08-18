@@ -1,0 +1,19 @@
+#container-footer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #4E4A45;
+  color: white;
+}
+#menu-footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#container-footer h1{
+  margin-left: 35px;
+  font-size: 25px;
+}
+#menu-footer h1:hover{
+  cursor: pointer;
+}

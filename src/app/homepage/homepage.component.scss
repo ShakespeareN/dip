@@ -1,0 +1,93 @@
+#homepagescreencol{
+  background-color: #CECECE;
+}
+#homepage{
+  width: 1300px;
+  height: 100%;
+  margin: auto;
+}
+#pocetnaslika2{
+  height: 655px;
+  width: 385px;
+}
+#pocetnaslika1{
+  height: 655px;
+  width: 915px;
+}
+#mainpage{
+  display: flex;
+  position: relative;
+}
+#buy-now{
+  width: 250px;
+  font-size: 30px;
+  height: 50px;
+  background-color: B6B6B6;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  opacity: 0.8;
+}
+#buy-now:hover{
+  opacity: 1;
+  height: 52px;
+  width: 252px;
+  cursor: pointer;
+}
+#mainpage2{
+  background-color: #4E4A45;
+  position: relative;
+  // height: 500px;
+  width: 100%;
+}
+#proba{
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  background-color: white;
+  top: 33%;
+  z-index: 2;
+}
+.man-woman-main{
+  display: flex;
+  margin: auto;
+  width: 1180px;
+  background-color: #656160;
+  position: relative;
+}
+#manmain{
+  width: 362px;
+  height: 497px;
+  position: relative;
+}
+#womanmain{
+  width:  362px;
+  height: 497px;;
+}
+.content{
+  width: 821px;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.content h3{
+  text-align: center;
+  width: 100%;
+}
+.button{
+  width: 250px;
+  font-size: 20px;
+  height: 50px;
+  background-color: #B6B6B6;
+  border-radius: 50px;
+  opacity: 0.8;
+}
+.button:hover{
+  cursor: pointer;
+}

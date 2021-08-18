@@ -1,0 +1,91 @@
+#mainpage3{
+  height: 470px;
+  width: 100%;
+  background-color: #656160;
+  overflow: hidden;
+}
+#mainpage3 h1{
+  width: 100%;
+  height: 50px;
+  background-color: #E0DFDF;
+  line-height: 50px;
+  padding-left: 10px;
+  font-style: italic;
+  margin: auto;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.product-card{
+  // display: flex;
+  // flex-wrap: wrap;
+  width: 220px;
+  height: 350px;
+  margin: 30px;
+  overflow: hidden;
+  background: #E0DFDF;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+#price{
+  color: #656160;
+  font-style: italic;
+  font-size: 14px;
+}
+// .example-card {
+//   max-width: 220px;
+//   margin: 30px;
+//   background: #E0DFDF;
+// }
+
+// .example-header-image {
+//   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//   background-size: cover;
+// }
+// .mat-card-image{
+//   height: 200px;
+// }
+.container-photo{
+  background: white;
+}
+.container-photo img{
+  width: 220px;
+  height: 230px;
+}
+.info-photo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2px;
+  justify-content: center;
+}
+.info-photo h3{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.info-photo p{
+  margin-top: 5px ;
+  color: #646464;
+  font-style: italic;
+}
+
+.containerbtn{
+  display: flex;
+  align-items: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.btn{
+  margin-left: 5px;
+  width: 100px;
+  border-radius: 20px;
+  background: #4E4A45;
+  color: white;
+}
