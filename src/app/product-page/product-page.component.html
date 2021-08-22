@@ -1,86 +1,87 @@
-
-<div id="zaglavlje-product-page">
-  <h1>{{ nameCollection }} collections</h1>
-  <div id="sort-container">
-
-    <form >
-    <!-- <mat-form-field appearance="fill">
-      <mat-label>Sort type</mat-label>
-        <mat-select (change)="onSortSelected($event.target.value)">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{ food.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field> -->
-
-  </form>
-  <label >Sort by &nbsp;</label>
-  <select [(ngModel)]='SortbyParam'>
-      <option value="type">Type of Products</option>
-      <option value="price">Price of Products</option>
-  </select>
-  <button type="button" class="sortbtn" (click)="OnSortDirection()">
-    Sort
-    <!-- <i *ngif="SortDirection ==='asc'" class="fas fa-sort-aplha-down"></i>
+<div class="product-page-backcolor">
+  <div id="zaglavlje-product-page">
+    <h1>{{ nameCollection }} collections</h1>
+    <div id="sort-container">
+      <label>Sort by: &nbsp;</label>
+      <select [(ngModel)]="SortbyParam">
+        <option value="type">Type of Products</option>
+        <option value="price">Price of Products</option>
+      </select>
+      <button type="button" class="sortbtn" (click)="OnSortDirection()">
+        Sort
+        <!-- <i *ngif="SortDirection ==='asc'" class="fas fa-sort-aplha-down"></i>
     <i *ngif="SortDirection ==='desc'" class="fas fa-sort-aplha-up"></i> -->
-  </button>
-  </div>
-</div>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <h3>Category</h3>
-    <ul>
-      <li (click)="onTypeSelected('shoes')">Shoes</li>
-      <li (click)="onTypeSelected('pants')">Pants</li>
-      <li (click)="onTypeSelected('shirt')">Shirts</li>
-      <li (click)="onTypeSelected('hat')">Hats</li>
-    </ul>
-    <h3>Price</h3>
-    <ul>
-      <li (click)="onPriceSelected(1)">0-5$</li>
-      <li (click)="onPriceSelected(2)">6-10$</li>
-      <li (click)="onPriceSelected(3)">11-20$</li>
-      <li (click)="onPriceSelected(4)">21-30$</li>
-      <li (click)="onPriceSelected(5)">>30$</li>
-    </ul>
-    <h3>Additional filter</h3>
-    <h3>Weather</h3>
-    <ul>
-      <li (click)="onWeatherSelected('summer')">Summer</li>
-      <li (click)="onWeatherSelected('winter')">Winter</li>
-    </ul>
-    <h3>Color</h3>
-    <ul>
-      <li (click)="onColorSelected('Blue')">Blue</li>
-      <li (click)="onColorSelected('Red')">Red</li>
-      <li (click)="onColorSelected('White')">White</li>
-      <li (click)="onColorSelected('Black')">Black</li>
-      <li (click)="onColorSelected('Green')">Green</li>
-    </ul>
-    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text|sort:'price':'Asc'
-    </button> -->
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Add Filter
-    </button>
-    <div class="container">
-      <div class="product-card" *ngFor="let item of products|filter:'':'type'|sort:[SortbyParam, SortDirection]"  >
-        <div class="container-photo">
-          <img src="{{ item.photo }}" alt="{{ item.title }}" />
-        </div>
-        <div class="info-photo">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.price | currency }}</p>
-        </div>
-        <div class="containerbtn">
-          <button class="btn" (click)="addToCart(item.id)">Add to cart</button>
-          <button class="btn" (click)="goToDetails(item.id)">Details</button>
-        </div>
-      </div>
+      </button>
     </div>
   </div>
-</mat-drawer-container>
+  <div class="probaa">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <h3>Category</h3>
+        <ul>
+          <li (click)="onTypeSelected('shoes')">Shoes</li>
+          <li (click)="onTypeSelected('pants')">Pants</li>
+          <li (click)="onTypeSelected('shirt')">Shirts</li>
+          <li (click)="onTypeSelected('hat')">Hats</li>
+        </ul>
+        <h3>Price</h3>
+        <ul>
+          <li (click)="onPriceSelected('1')">0-5$</li>
+          <li (click)="onPriceSelected('2')">6-10$</li>
+          <li (click)="onPriceSelected('3')">11-20$</li>
+          <li (click)="onPriceSelected('4')">21-30$</li>
+          <li (click)="onPriceSelected('5')">>30$</li>
+        </ul>
+        <h3>Additional filter</h3>
+        <h3>Weather</h3>
+        <ul>
+          <li (click)="onWeatherSelected('summer')">Summer</li>
+          <li (click)="onWeatherSelected('winter')">Winter</li>
+        </ul>
+        <h3>Color</h3>
+        <ul>
+          <li (click)="onColorSelected('blue')">Blue</li>
+          <li (click)="onColorSelected('red')">Red</li>
+          <li (click)="onColorSelected('white')">White</li>
+          <li (click)="onColorSelected('black')">Black</li>
+          <li (click)="onColorSelected('green')">Green</li>
+        </ul>
+        <button class="delete-filters" (click)="deleteFilters()">Delete filters</button>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Filter
+        </button>
+        <div class="container">
+          <div
+            class="product-card"
+            *ngFor="
+              let item of products
+                | filter: this.params.type:'type'
+                | filter: this.params.Price:'price'
+                | filter: this.params.color:'color'
+                | sort: [SortbyParam, SortDirection]
+            "
+          >
+            <div class="container-photo">
+              <img src="{{ item.photo }}" alt="{{ item.title }}" />
+            </div>
+            <div class="info-photo">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.price | currency }}</p>
+            </div>
+            <div class="containerbtn">
+              <button class="btn" (click)="addToCart(item.id)">
+                Add to cart
+              </button>
+              <button class="btn" (click)="goToDetails(item.id)">
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

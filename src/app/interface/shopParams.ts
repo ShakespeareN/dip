@@ -1,8 +1,8 @@
 export class ShopParams {
-  type: string = 'all';
-  Price: number = 0;
+  type: string = '';
+  Price: string = '';
   // sort: string = 'name';
-  weather: string = 'all';
-  color: string = 'all';
+  weather: string = '';
+  color: string = '';
   search: string = '';
 }
