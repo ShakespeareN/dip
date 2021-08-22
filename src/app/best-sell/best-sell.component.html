@@ -34,8 +34,8 @@
         <p>{{item.price |currency}}</p>
       </div>
       <div class="containerbtn">
-        <button class="btn">Add to cart</button>
-        <button class="btn">Details</button>
+        <button class="btn" (click)="addToCart(item.id)">Add to cart</button>
+        <button class="btn" (click)="goToDetails(item.id)">Details</button>
       </div>
     </div>
 </div>

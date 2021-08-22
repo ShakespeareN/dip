@@ -12,6 +12,9 @@ import { BestSellComponent } from './best-sell/best-sell.component';
 import { ProductsService } from './products.service';
 import {  HttpClientModule } from '@angular/common/http';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +22,17 @@ import { ProductPageComponent } from './product-page/product-page.component';
     FooterComponent,
     HomepageComponent,
     BestSellComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ export interface IProduct {
   gender: string;
   type: string;
   price: number,
+  color:string,
   sold: number,
   about:string;
   photo:string;

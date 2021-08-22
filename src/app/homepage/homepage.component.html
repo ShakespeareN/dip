@@ -5,7 +5,7 @@
         <div id="mainpage">
           <img src="..\assets\pocetnaslika.jpg" id="pocetnaslika1" alt="pf1">
           <img src="..\assets\pocetnaslika2.jpg" id="pocetnaslika2" alt="pf2">
-          <button id="buy-now">Buy now</button>
+          <button id="buy-now" (click)="goToProductPage('any')">Buy now</button>
         </div>
        <!--2-->
         <div id="mainpage2">
@@ -13,14 +13,14 @@
             <img src="..\assets\manmain.jpg" id="manmain" alt="pf1">
             <div class="content">
               <h3>Dress like real man, show your elegance</h3>
-              <button class="button">Chech stuff for man -></button>
+              <button class="button" (click)="goToProductPage('man')">Chech stuff for man -></button>
             </div>
           </div>
           <div id="proba"></div>
           <div class="man-woman-main">
             <div class="content">
               <h3>Dress like real woman, and show your style</h3>
-              <button class="button">Chech stuff for woman -></button>
+              <button class="button" (click)="goToProductPage('woman')">Chech stuff for woman -></button>
             </div>
             <img src="..\assets\womanmain.jpg" id="womanmain" alt="pf1">
           </div>
