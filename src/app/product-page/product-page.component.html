@@ -1,17 +1,24 @@
 <div class="product-page-backcolor">
   <div id="zaglavlje-product-page">
-    <h1>{{ nameCollection }} collections</h1>
-    <div id="sort-container">
-      <label>Sort by: &nbsp;</label>
-      <select [(ngModel)]="SortbyParam">
-        <option value="type">Type of Products</option>
-        <option value="price">Price of Products</option>
-      </select>
-      <button type="button" class="sortbtn" (click)="OnSortDirection()">
-        Sort
-        <!-- <i *ngif="SortDirection ==='asc'" class="fas fa-sort-aplha-down"></i>
+    <div id="zaglavlje">
+      <h1>{{ nameCollection }} collections</h1>
+      <Div class="containercentre">
+        <mat-icon>search</mat-icon>
+        <input type="text" id="searchHeader" placeholder="Search..." />
+      </Div>
+
+      <div id="sort-container">
+        <label>Sort by: &nbsp;</label>
+        <select [(ngModel)]="SortbyParam">
+          <option value="type">Type of Products</option>
+          <option value="price">Price of Products</option>
+        </select>
+        <button type="button" class="sortbtn" (click)="OnSortDirection()">
+          Sort
+          <!-- <i *ngif="SortDirection ==='asc'" class="fas fa-sort-aplha-down"></i>
     <i *ngif="SortDirection ==='desc'" class="fas fa-sort-aplha-up"></i> -->
-      </button>
+        </button>
+      </div>
     </div>
   </div>
   <div class="probaa">
@@ -32,7 +39,6 @@
           <li (click)="onPriceSelected('4')">21-30$</li>
           <li (click)="onPriceSelected('5')">>30$</li>
         </ul>
-        <h3>Additional filter</h3>
         <h3>Weather</h3>
         <ul>
           <li (click)="onWeatherSelected('summer')">Summer</li>
@@ -45,13 +51,17 @@
           <li (click)="onColorSelected('white')">White</li>
           <li (click)="onColorSelected('black')">Black</li>
           <li (click)="onColorSelected('green')">Green</li>
+          <li (click)="onColorSelected('brown')">Brown</li>
         </ul>
-        <button class="delete-filters" (click)="deleteFilters()">Delete filters</button>
+        <button class="delete-filters" (click)="deleteFilters()">
+          Delete filters
+        </button>
       </mat-drawer>
 
       <div class="example-sidenav-content">
         <button type="button" mat-button (click)="drawer.toggle()">
-          Filter
+          <!-- Filter -->
+          <mat-icon>filter_alt</mat-icon>
         </button>
         <div class="container">
           <div
@@ -61,6 +71,8 @@
                 | filter: this.params.type:'type'
                 | filter: this.params.Price:'price'
                 | filter: this.params.color:'color'
+                | filter: this.params.weather:'weather'
+                | filter: this.genderParam:'gender'
                 | sort: [SortbyParam, SortDirection]
             "
           >

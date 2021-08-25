@@ -8,5 +8,6 @@ export interface IProduct {
   color:string,
   sold: number,
   about:string;
+  weather: string;
   photo:string;
 }

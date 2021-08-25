@@ -1,0 +1,27 @@
+#container-details{
+  display: flex;
+  width: 1300px;
+  margin: auto;
+  // padding: 30px;
+  background-color: #bebebe;
+}
+img{
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin: 30px;
+  border: 3px solid rgba(68, 47, 33, 0.067);
+  // margin: auto;
+  border-radius: 15px;
+}
+#container-info{
+  width: 800px;
+  max-height: 300px;
+  padding: 15px;
+}
+.btn{
+  width: 25px;
+  border-radius: 15px;
+  background-color: #4E4A45;
+  color: white;;
+}

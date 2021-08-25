@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,13 +15,16 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ProductDetailsModule } from './product-details/product-details.module';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { BestSellModule } from './best-sell/best-sell.module';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    BestSellComponent,
     ProductPageComponent,
     FilterPipe,
     SortPipe
@@ -32,7 +35,14 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    ProductDetailsModule,
+    BestSellModule
+  ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  exports:[
+
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

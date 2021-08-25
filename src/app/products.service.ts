@@ -7,11 +7,14 @@ import { filter, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductsService {
-  proba: IProduct[];
+  product: IProduct;
   constructor(private http: HttpClient) { }
 
   getProducts(){
     return this.http.get<IProduct[]>('http://localhost:3000/products');
+  }
+  getOneProduct(id: number){
+    return this.http.get<IProduct>('http://localhost:3000/products/'+id);
   }
   // getProductss(shopParams: ShopParams){
   //   let params = new HttpParams();

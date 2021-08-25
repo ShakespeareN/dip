@@ -6,10 +6,11 @@
       "size":["S","M","L","XL"],
       "gender": "man",
       "type": "shirt",
-      "price": 15.00,
+      "price": 5.00,
       "color": "white",
       "sold":5,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/muskamajicakratakrukav.jpg"
     },
     {
@@ -22,6 +23,7 @@
       "color": "black",
       "sold":10,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/zenskitop.jpg"
     },
     {
@@ -31,9 +33,10 @@
       "gender": "woman",
       "type": "shirt",
       "price": 10.00,
-      "color": "red",
+      "color": "black",
       "sold":15,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/zenskamajicakratakrukav.jpg"
     },
     {
@@ -46,6 +49,7 @@
       "color": "white",
       "sold":20,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/muskamajicakratakrukav2.jpg"
     },
     {
@@ -58,6 +62,7 @@
       "color": "blue",
       "sold":15,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/muskamajicakratakrukav3.jpg"
     },
     {
@@ -70,6 +75,7 @@
       "color": "red",
       "sold":12,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/muskamajicakratakrukav4.jpg"
     },
     {
@@ -82,6 +88,7 @@
       "color": "brown",
       "sold":5,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/kapabraonzenska.jpg"
     },
     {
@@ -94,6 +101,7 @@
       "color": "black",
       "sold":3,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/sesircrnimuski.png"
     },
     {
@@ -106,30 +114,33 @@
       "color": "black",
       "sold":6,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/beretacrnamuska.png"
     },
     {
       "id":10,
-      "title": "Sesir crni zenski",
+      "title": "Sesir teget zenski",
       "size":["S","M","L","XL"],
       "gender": "woman",
       "type": "hat",
       "price": 20.00,
-      "color": "black",
+      "color": "blue",
       "sold":5,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/sesircrnizenski.png"
     },
     {
       "id":11,
-      "title": "Sesir zenski bez",
+      "title": "Sesir zenski",
       "size":["S","M","L","XL"],
       "gender": "woman",
       "type": "hat",
       "price": 20.00,
-      "color": "white",
+      "color": "brown",
       "sold":4,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/sesirzenskibez.png"
     },
     {
@@ -142,6 +153,7 @@
       "color": "blue",
       "sold":11,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/farmericemuske.jpg"
     },
     {
@@ -151,9 +163,10 @@
       "gender": "man",
       "type": "pants",
       "price": 35.00,
-      "color": "brown",
+      "color": "blue",
       "sold":10,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/pantalonemuske.jpg"
     },
     {
@@ -163,9 +176,10 @@
       "gender": "man",
       "type": "pants",
       "price": 15.00,
-      "color": "black",
+      "color": "blue",
       "sold":8,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/bermudemuske.jpg"
     },
     {
@@ -178,6 +192,7 @@
       "color": "blue",
       "sold":30,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/farmericezenske.jpg"
     },
     {
@@ -190,54 +205,59 @@
       "color": "red",
       "sold":21,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/pantalonezenske.jpg"
     },
     {
       "id":17,
       "title": "Cizme muske",
-      "size":["S","M","L","XL"],
+      "size":["36","37","38","39"],
       "gender": "man",
       "type": "shoes",
       "price": 40.00,
       "color": "brown",
       "sold":5,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/cizmemuske.jpg"
     },
     {
       "id":18,
       "title": "Cipele muske",
-      "size":["S","M","L","XL"],
+      "size":["42","43","44","45"],
       "gender": "man",
       "type": "shoes",
       "price": 55.00,
-      "color": "black",
+      "color": "brown",
       "sold":10,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/cipelemuske.jpg"
     },
     {
       "id":19,
       "title": "Cipele zenske",
-      "size":["S","M","L","XL"],
+      "size":["36","37","38","39"],
       "gender": "woman",
       "type": "shoes",
       "price": 60.00,
       "color": "red",
       "sold":14,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/cipelezenske.jpg"
     },
     {
       "id":20,
       "title": "Patike muske",
-      "size":["S","M","L","XL"],
+      "size":["42","43","44","45"],
       "gender": "man",
       "type": "shoes",
       "price": 49.99,
       "color": "green",
       "sold":22,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"summer",
       "photo":"./assets/patikemuske.jpg"
     },
     {
@@ -247,9 +267,10 @@
       "gender": "man",
       "type": "shirt",
       "price": 15.00,
-      "color": "grey",
+      "color": "blue",
       "sold":5,
       "about":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+      "weather":"winter",
       "photo":"./assets/majicamuskadugirukav.png"
     }
   ]

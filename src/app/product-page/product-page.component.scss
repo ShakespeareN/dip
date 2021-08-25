@@ -15,6 +15,11 @@ margin: auto;
   padding-left: 30px;
   padding-right: 30px;
 }
+#zaglavlje{
+  display: flex;
+  width: 1300px;
+  margin: auto;
+}
 #sort-container{
   background-color: #646464;
   height: 60px;
@@ -157,4 +162,30 @@ margin: auto;
   color: #656160;
   font-style: italic;
   font-size: 14px;
+}
+.containercentre{
+  position: relative;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  margin: auto;
+  width:420px;
+  height: 40px;
+  padding-top: 5px;
+  // top: 10px;
+  // left: 38%;
+}
+#searchHeader{
+  height: 30px;
+  border-radius: 40px;
+  border: grey 1px solid;
+  // margin: auto;
+  width: 400px;
+}
+.mat-icon{
+  height: 30px;
+  line-height: 30px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
 }

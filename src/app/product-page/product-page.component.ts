@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../interface/iproduct';
 import { ShopParams } from '../interface/shopParams';
-import { ProviderAstType } from '@angular/compiler';
-import { map } from 'rxjs/operators'
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -13,63 +13,56 @@ export class ProductPageComponent implements OnInit {
   products: IProduct[];
   params = new ShopParams();
   nameCollection: string = 'All';
-  SortbyParam ='';
+  SortbyParam = '';
   SortDirection = 'asc';
+  genderParam:string='';
 
-  constructor(private productService: ProductsService) {}
+  constructor(private productService: ProductsService,private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    if(this.route.snapshot.paramMap.get('gender')!='all'){
+      this.genderParam = this.route.snapshot.paramMap.get('gender');
+    }
+
     this.getProducts();
   }
   getProducts() {
     this.productService
-    .getProducts().subscribe((data) => (
-
-      this.products = data
-
-      ));
-
-
-    // if (this.params.type !== 'all') {
-    //   this.productService
-    //     .getProducts()
-    //     .subscribe(
-    //       (data) =>
-    //         (this.products = data.filter((e) =>
-    //           e.type.includes(this.params.type)
-    //         ))
-    //     );
-    // }
+      .getProducts()
+      .subscribe((data) => (this.products = data));
   }
 
-
-  OnSortDirection(){
-    if (this.SortDirection === 'desc'){
+  OnSortDirection() {
+    if (this.SortDirection === 'desc') {
       this.SortDirection = 'asc';
-    }else{
-      this.SortDirection = 'desc'
+    } else {
+      this.SortDirection = 'desc';
     }
   }
   onTypeSelected(type: string) {
     this.params.type = type;
-    // this.getProducts();
   }
   onPriceSelected(price: string) {
     this.params.Price = price;
-   // this.getProducts();
   }
   onWeatherSelected(weather: string) {
     this.params.weather = weather;
-   // this.getProducts();
   }
   onColorSelected(color: string) {
     this.params.color = color;
-   // this.getProducts();
   }
-  deleteFilters(){
-    this.params.type =''
-    this.params.color =''
-    this.params.Price =''
-    this.params.weather =''
+  deleteFilters() {
+    this.params.type = '';
+    this.params.color = '';
+    this.params.Price = '';
+    this.params.weather = '';
+    this.genderParam = '';
+    this.router.navigate([`/product-page/all`]);
   }
+  goToDetails(id:number){
+    this.router.navigate([`/product-details/${id}`]);
+  }
+
+
 }
+

@@ -1,23 +1,23 @@
 <div id="toolbar">
-  <Div class="containercentre">
-    <!--<mat-icon>search</mat-icon>!-->
+  <!-- <Div class="containercentre">
+    <mat-icon (click)="redirectTo('/product-page/all')">search</mat-icon>
     <input type="text" id="searchHeader" placeholder="Search..." />
-  </Div>
+  </Div> -->
 
   <div class="flexclass">
     <ul id="startMenu">
-      <li (click)="goToProductPage('man')">Man</li>
-      <li (click)="goToProductPage('woman')">Woman</li>
-      <li (click)="goToProductPage('kids')">Kids</li>
+      <li (click)="redirectTo('/product-page/all')">All</li>
+      <li (click)="redirectTo('/product-page/man')">Man</li>
+      <li (click)="redirectTo('/product-page/woman')">Woman</li>
       <li>About</li>
       <li>Contact</li>
     </ul>
 
-    <h1>Online store</h1>
+    <h1 (click)="redirectTo('/start')">Online store</h1>
     <div id="pristup">
       <div>
-        <h3 (click)="logIn()">Login</h3>
-        <h3 (click)="signUp()">SignUp</h3>
+        <h3 (click)="redirectTo('/login-page')">Login</h3>
+        <h3 (click)="redirectTo('/signup-page')">SignUp</h3>
       </div>
     </div>
   </div>

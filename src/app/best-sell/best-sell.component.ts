@@ -23,17 +23,15 @@ export class BestSellComponent implements OnInit {
   //  this.showBestSll();e
   }
   goToDetails(id: any){
-    this.router.navigate([`/product-details/${id}`]);
+    // this.router.navigate([`/product-details/${id}`]);
+    this.redirectTo(`/product-details/${id}`);
   }
   addToCart(id: any){
 
   }
-//napraviti niz koji ima 5 mesta i popuniti ga sa 5 proizvoda koji su najvise prodavani
-//sortirati po prodatoj kolicini pa slice
-showBestSell() {
-  this.products;
-    // this.elements = Object.keys(this.products).sort((a,b)=> this.products[b]-this.products[a])
-    // .slice(0,5);
-    // this.productsBS = this.elements.map(key=> this.products[key]);
+    redirectTo(uri: string) {
+    this.router
+      .navigateByUrl('/', { skipLocationChange: true })
+      .then(() => this.router.navigate([uri]));
   }
 }

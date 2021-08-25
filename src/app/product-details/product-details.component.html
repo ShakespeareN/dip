@@ -1,0 +1,22 @@
+<div id="container-details">
+  <!-- <div id="div-photo"> -->
+  <img src="{{ product.photo }}" alt="" />
+  <!-- </div> -->
+  <div id="container-info">
+    <h3>{{ product.title }}</h3>
+    <p>{{ product.gender }}</p>
+    <p>Size: {{ product.size }}</p>
+    <p>Color: {{ product.color }}</p>
+    <div id="numberOfProducts">
+      <button id="increaseAmount" class="btn">-</button>
+      {{3}}
+      <button id="reduceAmount" class="btn">+</button>
+    </div>
+
+    <!-- <p style="background:{{product.color}}; width: 20px; height: 20px;"></p> -->
+    <p>{{ product.price | currency }}</p>
+    <p>{{ product.about }}</p>
+  </div>
+</div>
+
+<app-best-sell></app-best-sell>
