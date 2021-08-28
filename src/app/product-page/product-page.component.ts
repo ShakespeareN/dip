@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../interface/iproduct';
 import { ShopParams } from '../interface/shopParams';
@@ -15,12 +15,17 @@ export class ProductPageComponent implements OnInit {
   nameCollection: string = 'All';
   SortbyParam = '';
   SortDirection = 'asc';
-  genderParam:string='';
+  genderParam: string = '';
 
-  constructor(private productService: ProductsService,private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private productService: ProductsService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit(): void {
-    if(this.route.snapshot.paramMap.get('gender')!='all'){
+    if (this.route.snapshot.paramMap.get('gender') != 'all') {
       this.genderParam = this.route.snapshot.paramMap.get('gender');
     }
 
@@ -39,8 +44,13 @@ export class ProductPageComponent implements OnInit {
       this.SortDirection = 'desc';
     }
   }
-  onTypeSelected(type: string) {
+  onTypeSelected(e, type: string) {
     this.params.type = type;
+    // console.log(e.target.classList.value);
+    // this.renderer.removeClass(e.target, "nijeblea");
+
+    // console.log(e.target.classList.value);
+    this.checkClass(e);
   }
   onPriceSelected(price: string) {
     this.params.Price = price;
@@ -51,6 +61,17 @@ export class ProductPageComponent implements OnInit {
   onColorSelected(color: string) {
     this.params.color = color;
   }
+  checkClass(e: any){
+    console.log(e);
+    const hasClass = e.target.classList.contains("nijeblea");
+    if(hasClass) {
+      this.renderer.removeClass(e.target, "nijeblea");
+      console.log(e.target.classList.value);
+    } else {
+      this.renderer.addClass(e.target, "nijeblea");
+      console.log(e.target.classList.value);
+    }
+  }
   deleteFilters() {
     this.params.type = '';
     this.params.color = '';
@@ -59,10 +80,7 @@ export class ProductPageComponent implements OnInit {
     this.genderParam = '';
     this.router.navigate([`/product-page/all`]);
   }
-  goToDetails(id:number){
+  goToDetails(id: number) {
     this.router.navigate([`/product-details/${id}`]);
   }
-
-
 }
-
