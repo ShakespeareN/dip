@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IProduct } from '../interface/iproduct';
 import { ProductsService } from '../products.service';
+import { BasketService } from '../basket.service';
 
 
 @Component({
@@ -13,7 +14,11 @@ export class BestSellComponent implements OnInit {
   products: IProduct[];
   productsBS: IProduct[];
   elements:any;
-  constructor(private productService: ProductsService, private router: Router) { }
+  constructor(
+    private productService: ProductsService,
+    private basketService: BasketService,
+    private router: Router
+     ) { }
 
   ngOnInit(): void {
     this.showProducts();
@@ -26,8 +31,8 @@ export class BestSellComponent implements OnInit {
     // this.router.navigate([`/product-details/${id}`]);
     this.redirectTo(`/product-details/${id}`);
   }
-  addToCart(id: any){
-
+  addToCart(item: IProduct){
+    this.basketService.addItemToBasket(item);
   }
     redirectTo(uri: string) {
     this.router

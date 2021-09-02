@@ -45,24 +45,30 @@ margin: auto;
 }
 .example-container {
   // width: 100% ;
-
+  overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .example-sidenav-content {
   display: flex;
   background-color: #656160;
-  min-height: 800px;
+  min-height:900px !important;
 }
 .example-sidenav{
   background: #4E4A45;
   color: white;
+  overflow: hidden;
+  min-height: 900px !important;
 }
-.mat-drawer li:hover{
-  cursor: pointer;
+.mat-drawer{
+  overflow: hidden;
+  height: auto;
+  min-height: 900px !important;
 }
 .mat-drawer h3{
-  text-align: center;
+  // text-align: center;
+  margin-left: 10px;
+  margin-bottom: 0px;
 }
 .mat-button{
   width: 100px;
@@ -72,17 +78,27 @@ margin: auto;
   background-color: rgb(71, 68, 68);
   color: white;
   padding: auto;
-  margin-left: 0;
+  margin-bottom: 20px;
 }
 .delete-filters{
-  width: 100%;
+  width: 100px;
+  height: 30px;
   border-radius: 15px;
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-.example-sidenav {
-  padding: 20px;
+// .example-sidenav {
+//   padding: 20px;
+// }
+.mat-list-option{
+  color: white;
+  height: 30px !important;
+  width: 120px !important;
 }
-
+.mat-list-single-selected-option, .mat-list-single-selected-option:hover, .mat-list-single-selected-option:focus {
+  color: orange;
+}
 //KARTICA
 .container-photo{
   background: white;

@@ -1,0 +1,53 @@
+<div id="container">
+  <!-- <h1>Login page</h1> -->
+
+
+<mat-card class="example-card">
+  <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title>Create your account</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="addForm" action="">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input formControlName ="name" class="form-control" matInput placeholder="" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input formControlName ="address" class="form-control" matInput placeholder="" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Date of birth</mat-label>
+        <input formControlName ="dateofbirth" class="form-control" matInput placeholder="" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" >
+        <mat-label>Telephone</mat-label>
+        <span matPrefix>+381 &nbsp;</span>
+        <input formControlName ="phone"  class="form-control" matInput placeholder="555-555-1234">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input formControlName ="username" class="form-control" matInput placeholder="" >
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your password</mat-label>
+        <input formControlName ="password" class="form-control" matInput />
+      </mat-form-field>
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Enter your password one more time</mat-label>
+        <input name="password2" matInput placeholder="" #InputUsername>
+      </mat-form-field> -->
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions fxLayout="column" fxLayoutAlign="center center">
+    <button mat-raised-button type="button" color="accent" (click)="SignUp()" [disabled]="!addForm.valid">SIGN UP</button>
+  </mat-card-actions>
+</mat-card>
+
+</div>

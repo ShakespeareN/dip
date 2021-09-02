@@ -24,35 +24,40 @@
   <div class="probaa">
     <mat-drawer-container class="example-container" autosize>
       <mat-drawer #drawer class="example-sidenav" mode="side">
+
         <h3 >Category</h3>
-        <ul>
-          <li  (click)="onTypeSelected($event, 'shoes')">Shoes</li>
-          <li  (click)="onTypeSelected($event, 'pants')">Pants</li>
-          <li  (click)="onTypeSelected($event, 'shirt')">Shirts</li>
-          <li  (click)="onTypeSelected($event, 'hat')">Hats</li>
-        </ul>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option (click)="onTypeSelected('shoes')">Shoes</mat-list-option>
+          <mat-list-option (click)="onTypeSelected('pants')">Pants</mat-list-option>
+          <mat-list-option (click)="onTypeSelected('shirt')">Shirts</mat-list-option>
+          <mat-list-option (click)="onTypeSelected('hat')">Hats</mat-list-option>
+        </mat-selection-list>
+
         <h3>Price</h3>
-        <ul>
-          <li  (click)="onPriceSelected('1')">0-5$</li>
-          <li  (click)="onPriceSelected('2')">6-10$</li>
-          <li  (click)="onPriceSelected('3')">11-20$</li>
-          <li  (click)="onPriceSelected('4')">21-30$</li>
-          <li  (click)="onPriceSelected('5')">>30$</li>
-        </ul>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option (click)="onPriceSelected('1')">0-5$</mat-list-option>
+          <mat-list-option (click)="onPriceSelected('2')">6-10$</mat-list-option>
+          <mat-list-option (click)="onPriceSelected('3')">11-20$</mat-list-option>
+          <mat-list-option (click)="onPriceSelected('4')">21-30$</mat-list-option>
+          <mat-list-option (click)="onPriceSelected('5')">>30$</mat-list-option>
+      </mat-selection-list>
+
         <h3>Weather</h3>
-        <ul>
-          <li  (click)="onWeatherSelected('summer')">Summer</li>
-          <li  (click)="onWeatherSelected('winter')">Winter</li>
-        </ul>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option (click)="onWeatherSelected('summer')">Summer</mat-list-option>
+          <mat-list-option  (click)="onWeatherSelected('winter')">Winter</mat-list-option>
+       </mat-selection-list>
+
         <h3>Color</h3>
-        <ul>
-          <li  (click)="onColorSelected('blue')">Blue</li>
-          <li  (click)="onColorSelected('red')">Red</li>
-          <li  (click)="onColorSelected('white')">White</li>
-          <li  (click)="onColorSelected('black')">Black</li>
-          <li  (click)="onColorSelected('green')">Green</li>
-          <li  (click)="onColorSelected('brown')">Brown</li>
-        </ul>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option (click)="onColorSelected('blue')">Blue</mat-list-option>
+          <mat-list-option  (click)="onColorSelected('red')">Red</mat-list-option>
+          <mat-list-option (click)="onColorSelected('white')">White</mat-list-option>
+          <mat-list-option  (click)="onColorSelected('black')">Black</mat-list-option>
+          <mat-list-option (click)="onColorSelected('green')">Green</mat-list-option>
+          <mat-list-option  (click)="onColorSelected('brown')">Brown</mat-list-option>
+        </mat-selection-list>
+
         <button class="delete-filters" (click)="deleteFilters()">
           Delete filters
         </button>
@@ -85,7 +90,7 @@
               <p>{{ item.price | currency }}</p>
             </div>
             <div class="containerbtn">
-              <button class="btn" (click)="addToCart(item.id)">
+              <button class="btn" (click)="addToCart(item)">
                 Add to cart
               </button>
               <button class="btn" (click)="goToDetails(item.id)">

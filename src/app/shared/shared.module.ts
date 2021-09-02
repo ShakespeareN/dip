@@ -8,7 +8,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatListModule} from '@angular/material/list';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
   declarations: [],
   imports: [
@@ -20,7 +24,12 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatButtonModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule,
+    MatBadgeModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatStepperModule
   ],
   exports:[
     MatToolbarModule,
@@ -30,7 +39,12 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatButtonModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule,
+    MatBadgeModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatStepperModule
   ]
 })
 export class SharedModule { }

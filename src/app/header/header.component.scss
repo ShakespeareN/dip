@@ -1,35 +1,29 @@
-ul{
-  text-decoration: none;
+#main-content-toolbar{
+  width: 1300px;
+  margin: auto;
+}
+.mat-selection-list{
   display: flex;
-  // margin-left: 5%;
   width: auto;
 }
 #startMenu{
-  width: 400px;
+  margin-top: 10px;
+  width: 300px;
 }
-#startMenu li{
-  margin-left:10px;
-  text-decoration: none;
-  list-style: none;
+#startMenu .mat-list-option{
   font-size: 15px;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  width: 50px;
-  padding: 5px;
+  text-align: center !important;
+  width: 85px !important;
   color: white;
 }
-#startMenu li:hover{
- background-color: #C4C4C4;
- border-radius: 50px;
- text-align: center;
- line-height: 30px;
-  // font-size: 17px;
-  cursor: pointer;
+
+.mat-list-single-selected-option, .mat-list-single-selected-option:hover, .mat-list-single-selected-option:focus {
+  color: white !important;
+  border-radius: 50px;
 }
 .flexclass{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: white;
 }
 #toolbar{
@@ -37,48 +31,38 @@ ul{
   background-color: #4E4A45;
   position: relative;
 }
-// .containercentre{
-//   position: relative;
-//   display: flex;
-//   align-content: space-around;
-//   justify-content: space-around;
-//   margin: auto;
-//   width:420px;
-//   height: 40px;
-//   padding-top: 5px;
-//   // top: 10px;
-//   // left: 38%;
-// }
-// #searchHeader{
-//   height: 30px;
-//   border-radius: 40px;
-//   border: grey 1px solid;
-//   // margin: auto;
-//   width: 400px;
-// }
-// .mat-icon{
-//   height: 30px;
-//   line-height: 30px;
-//   font-size: 25px;
-//   color: white;
-//   cursor: pointer;
-// }
+
 #pristup{
   position: relative;
   //right: 100px;
   display: flex;
-  //justify-content: space-between;
-  justify-content: space-around;
-  width: 400px;
+  justify-content: flex-end;
+  // justify-content: space-around;
+  width: 300px;
+  margin-top: 10px;
 }
 #pristup div{
   display: flex;
-  width: 120px;
+  width: 150px;
   justify-content: space-between;
+  align-items: center;
+}
+#container-header-cart{
+  width: 50px;
+}
+#container-header-cart .mat-icon{
+  cursor: pointer;
 }
 #pristup h3{
   cursor: pointer;
+  margin-left: 10px;
 }
 h1{
   cursor: pointer;
+}
+#logged .mat-icon{
+  font-size: 50px;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 60px;
 }

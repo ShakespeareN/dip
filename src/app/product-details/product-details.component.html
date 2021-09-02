@@ -1,6 +1,6 @@
-<div id="container-details">
+<div *ngIf="product" id="container-details">
   <!-- <div id="div-photo"> -->
-  <img src="{{ product.photo }}" alt="" />
+  <img  src="{{product.photo}}" alt="" />
   <!-- </div> -->
   <div id="container-info">
     <h3>{{ product.title }}</h3>
@@ -8,10 +8,11 @@
     <p>Size: {{ product.size }}</p>
     <p>Color: {{ product.color }}</p>
     <div id="numberOfProducts">
-      <button id="increaseAmount" class="btn">-</button>
-      {{3}}
-      <button id="reduceAmount" class="btn">+</button>
+      <button id="increaseAmount" class="btn" (click)="decrementQuantity()">-</button>
+      {{productQuantity}}
+      <button id="reduceAmount" class="btn" (click)="incrementQuantity()">+</button>
     </div>
+    <button id="addToCart"(click)="addItemToBasket()">Add to Cart</button>
 
     <!-- <p style="background:{{product.color}}; width: 20px; height: 20px;"></p> -->
     <p>{{ product.price | currency }}</p>

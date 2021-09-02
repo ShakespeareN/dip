@@ -3,6 +3,7 @@ import { ProductsService } from '../products.service';
 import { IProduct } from '../interface/iproduct';
 import { ShopParams } from '../interface/shopParams';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BasketService } from '../basket.service';
 
 @Component({
   selector: 'app-product-page',
@@ -19,9 +20,9 @@ export class ProductPageComponent implements OnInit {
 
   constructor(
     private productService: ProductsService,
+    private basketService: BasketService,
     private router: Router,
     private route: ActivatedRoute,
-    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
@@ -44,13 +45,8 @@ export class ProductPageComponent implements OnInit {
       this.SortDirection = 'desc';
     }
   }
-  onTypeSelected(e, type: string) {
+  onTypeSelected(type: string) {
     this.params.type = type;
-    // console.log(e.target.classList.value);
-    // this.renderer.removeClass(e.target, "nijeblea");
-
-    // console.log(e.target.classList.value);
-    this.checkClass(e);
   }
   onPriceSelected(price: string) {
     this.params.Price = price;
@@ -61,17 +57,7 @@ export class ProductPageComponent implements OnInit {
   onColorSelected(color: string) {
     this.params.color = color;
   }
-  checkClass(e: any){
-    console.log(e);
-    const hasClass = e.target.classList.contains("nijeblea");
-    if(hasClass) {
-      this.renderer.removeClass(e.target, "nijeblea");
-      console.log(e.target.classList.value);
-    } else {
-      this.renderer.addClass(e.target, "nijeblea");
-      console.log(e.target.classList.value);
-    }
-  }
+
   deleteFilters() {
     this.params.type = '';
     this.params.color = '';
@@ -82,5 +68,8 @@ export class ProductPageComponent implements OnInit {
   }
   goToDetails(id: number) {
     this.router.navigate([`/product-details/${id}`]);
+  }
+  addToCart(item: IProduct){
+    this.basketService.addItemToBasket(item);
   }
 }

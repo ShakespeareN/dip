@@ -1,53 +1,52 @@
 <div id="toolbar">
-  <!-- <Div class="containercentre">
-    <mat-icon (click)="redirectTo('/product-page/all')">search</mat-icon>
-    <input type="text" id="searchHeader" placeholder="Search..." />
-  </Div> -->
+  <div id="main-content-toolbar">
+    <div class="flexclass">
+      <mat-selection-list [multiple]="false" id="startMenu">
+        <mat-list-option (click)="redirectTo('/start')">Home</mat-list-option>
+        <mat-list-option (click)="redirectTo('/product-page/all')"
+          >All</mat-list-option
+        >
+        <mat-list-option (click)="redirectTo('/product-page/man')"
+          >Man</mat-list-option
+        >
+        <mat-list-option (click)="redirectTo('/product-page/woman')"
+          >Woman</mat-list-option
+        >
+        <!-- <mat-list-option (click)="redirectTo('/product-page/man')"
+          >About</mat-list-option
+        >
+        <mat-list-option (click)="redirectTo('/product-page/man')"
+          >Contact</mat-list-option
+        > -->
+      </mat-selection-list>
 
-  <div class="flexclass">
-    <ul id="startMenu">
-      <li (click)="redirectTo('/product-page/all')">All</li>
-      <li (click)="redirectTo('/product-page/man')">Man</li>
-      <li (click)="redirectTo('/product-page/woman')">Woman</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
+      <h1 (click)="redirectTo('/start')">Online store</h1>
+      <div id="pristup">
+        <div>
+          <div id="container-header-cart">
+            <mat-icon
+              matBadge="{{productsCount}}"
+              matBadgeColor="warn"
+              (click)="redirectTo('/cart-page')"
+              >shopping_cart</mat-icon
+            >
+          </div>
+          <div *ngIf="!logged" id="login-signup">
+            <h3 (click)="redirectTo('/login-page')">Login</h3>
+            <h3 (click)="redirectTo('/signup-page')">SignUp</h3>
+          </div>
+          <div *ngIf="logged" id="logged">
+            <button mat-button [matMenuTriggerFor]="menu">
+              <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="logOut()"> Log Out</button>
+              <!-- <button mat-menu-item>Item 2</button> -->
+            </mat-menu>
 
-    <h1 (click)="redirectTo('/start')">Online store</h1>
-    <div id="pristup">
-      <div>
-        <h3 (click)="redirectTo('/login-page')">Login</h3>
-        <h3 (click)="redirectTo('/signup-page')">SignUp</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<!--
-<mat-toolbar class="header">
-  <mat-toolbar-row>
-    <input type="text" id="searchHeader" placeholder="Search...">
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <ul id="startMenu">
-      <li>Man</li>
-      <li>Woman</li>
-      <li>Kids</li>
-      <li>About</li>
-      <li>Contact Us</li>
-    </ul>
-    <h1>Online store</h1>
-    <div id="loginSignUpCart">
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" >
-      <mat-icon>search</mat-icon>
-      </button>
-      <div id="pristup">
-        <h3>Login</h3>
-        <h3>SignUp</h3>
-      </div>
-            <button mat-icon-button class="example-icon" >
-      <mat-icon>shopping_cart</mat-icon>
-      </button>
-    </div>
-
-  </mat-toolbar-row>
-</mat-toolbar> -->

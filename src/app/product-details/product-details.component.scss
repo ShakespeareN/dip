@@ -24,4 +24,15 @@ img{
   border-radius: 15px;
   background-color: #4E4A45;
   color: white;;
+  cursor: pointer;
+}
+#addToCart{
+  width: 80px;
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#addToCart:active{
+  background-color: #4E4A45;
+  color: white;
 }

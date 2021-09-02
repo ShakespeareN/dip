@@ -14,20 +14,29 @@ import {  HttpClientModule } from '@angular/common/http';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProductDetailsModule } from './product-details/product-details.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { BestSellModule } from './best-sell/best-sell.module';
+import { ProductPageModule } from './product-page/product-page.module';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    ProductPageComponent,
-    FilterPipe,
-    SortPipe
+    LoginPageComponent,
+    SignupPageComponent,
+    CartPageComponent,
+    CheckoutComponent,
+    // ProductPageComponent,
+    // FilterPipe,
+    // SortPipe
   ],
   imports: [
     BrowserModule,
@@ -35,10 +44,13 @@ import { BestSellModule } from './best-sell/best-sell.module';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-    FormsModule,
-    CommonModule,
+    // FormsModule,
+    // CommonModule,
     ProductDetailsModule,
-    BestSellModule
+    BestSellModule,
+    ProductPageModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   exports:[

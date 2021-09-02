@@ -1,0 +1,34 @@
+<div id="cart-container">
+  <h1>Your Cart</h1>
+  <div id="container">
+    <div id="products-cart-container">
+      <div id="message" *ngIf="(basket$ | async) === null">
+        <p>There is no items in your basket.</p>
+      </div>
+      <div id="products-list" *ngIf="(basket$ | async)">
+        <div class="product" *ngFor="let item of (basket$ | async).items">
+          <div class="container-photo">
+          <img src={{item.photo}} alt="">
+          </div>
+          <div class="title">
+          <p>{{item.title}} </p>
+          </div>
+          <p> {{item.price|currency}} </p>
+          <div class="quantity">
+            <button class="btn" (click)="decrementBasketQuantity(item)">-</button>
+            {{item.quantity}}
+            <button class="btn" (click)="incrementBasketQuantity(item)">+</button>
+          </div>
+          {{(item.price*item.quantity)|currency}}
+          <mat-icon (click)="removeBasketItem(item)">delete</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div id="total">
+      <h3>Your bill</h3>
+      <p>Total cost: {{total|currency}}</p>
+      <button id="order" (click)="redirectTo('/checkout')"[disabled]="total<=0">Checkout</button>
+      <p>Delivery is made exclusively on weekdays in the period from 09h to 16h, via courier services. The courier will contact you via your contact phone on the day of delivery.</p>
+    </div>
+  </div>
+</div>

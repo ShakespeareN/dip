@@ -1,0 +1,39 @@
+<div id="container">
+  <!-- <h1>Login page</h1> -->
+
+
+<mat-card class="example-card">
+  <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title>Log In</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" #userForm="ngForm" action="">
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input name="username" [(ngModel)]="user.username" class="form-control" matInput placeholder="" >
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput matInput name="password" [(ngModel)]="user.password" class="form-control" [type]="hide ? 'password' : 'text'"  #InputPassword/>
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <p *ngIf="notValidUser" id="messageUser">Wrong username/password</p>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions fxLayout="column" fxLayoutAlign="center center">
+    <button mat-raised-button type="button" color="accent" (click)="logIn()" >LOG IN</button>
+  </mat-card-actions>
+</mat-card>
+
+</div>
