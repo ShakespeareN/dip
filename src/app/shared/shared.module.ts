@@ -13,6 +13,10 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -29,7 +33,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatBadgeModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   exports:[
     MatToolbarModule,
@@ -44,7 +52,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatBadgeModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class SharedModule { }

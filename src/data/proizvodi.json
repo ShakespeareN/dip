@@ -385,7 +385,7 @@
       "name": "Nikolas",
       "dateofbirth": "17.08.2000.",
       "address": "Gavrila Principa",
-      "phone": 324546665,
+      "phone": "324546665",
       "username": "shakespeare",
       "password": "Passw0rd"
     },
@@ -424,6 +424,33 @@
       "username": "ZdravCol",
       "password": "123456",
       "id": 5
+    },
+    {
+      "name": "Marko Markovic",
+      "address": "Petra I",
+      "dateofbirth": "20.10.1968",
+      "phone": "213213203",
+      "username": "markomarkovic",
+      "password": "markomarkovic",
+      "id": 6
+    },
+    {
+      "name": "Nikola",
+      "address": "1300 kaplara",
+      "dateofbirth": "2021-09-09T22:00:00.000Z",
+      "phone": "653221546",
+      "username": "nikolanikola",
+      "password": "nikolanikola",
+      "id": 7
+    },
+    {
+      "name": "Nikola S Sestic",
+      "address": "Omladinskog pokreta",
+      "dateofbirth": "2021-09-14T22:00:00.000Z",
+      "phone": "123123123",
+      "username": "probaproba",
+      "password": "probaproba",
+      "id": 8
     }
   ],
   "basket": [
@@ -1220,6 +1247,367 @@
           "quantity": 2
         }
       ]
+    },
+    {
+      "id": "9c1fa545-241e-4f15-8ea7-b4480672db8d",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 5,
+          "title": "Muska majica kratak rukav teget",
+          "price": 10,
+          "photo": "./assets/muskamajicakratakrukav3.jpg",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "d866d68b-e9c2-43ea-852c-79e54c146f2d",
+      "items": [
+        {
+          "id": 19,
+          "title": "Cipele zenske",
+          "price": 60,
+          "photo": "./assets/cipelezenske.jpg",
+          "quantity": 10
+        },
+        {
+          "id": 18,
+          "title": "Cipele muske",
+          "price": 55,
+          "photo": "./assets/cipelemuske.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 20,
+          "title": "Patike muske",
+          "price": 49.99,
+          "photo": "./assets/patikemuske.jpg",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "5b32da5e-b5e6-4b85-a8df-15c107b752be",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "c8cd2ea1-354b-49fb-ad53-c4d0d6d94a36",
+      "items": [
+        {
+          "id": 17,
+          "title": "Cizme muske",
+          "price": 40,
+          "photo": "./assets/cizmemuske.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "b5bd8570-fe3c-46ff-b4fe-82ade1a0b8ce",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "title": "Zenska majica bez rukava",
+          "price": 10,
+          "photo": "./assets/zenskitop.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "6b0d774d-0a4c-4499-bb43-52288cac2325",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 3
+        },
+        {
+          "id": 2,
+          "title": "Zenska majica bez rukava",
+          "price": 10,
+          "photo": "./assets/zenskitop.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "a7b04767-072d-4c23-bc4f-76d94ae4cbbf",
+      "items": [
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "cb542831-32b2-45fb-9e58-1bc0516e5dd4",
+      "items": [
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "30cb44ae-e91b-40c0-96fa-85a06ee27566",
+      "items": [
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 17,
+          "title": "Cizme muske",
+          "price": 40,
+          "photo": "./assets/cizmemuske.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "bbeaee0f-1fa4-4dca-bf42-235806a47a95",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 4
+        },
+        {
+          "id": 20,
+          "title": "Patike muske",
+          "price": 49.99,
+          "photo": "./assets/patikemuske.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "2878304e-e53a-4ab6-8c30-6e83e2705840",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 4
+        },
+        {
+          "id": 2,
+          "title": "Zenska majica bez rukava",
+          "price": 10,
+          "photo": "./assets/zenskitop.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "title": "Zenska majica kratak rukav",
+          "price": 10,
+          "photo": "./assets/zenskamajicakratakrukav.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "9b939ca7-0012-48f5-ae8e-05e53078cabd",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "24d53c15-dffc-4444-8166-a641f53d0778",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d53bd506-cf8f-468a-b0fb-de78d454e2b2",
+      "items": []
+    },
+    {
+      "id": "8ce6e5c9-1653-4454-8657-c756ef798d78",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 16
+        },
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "e9edbf30-03bd-4b2c-bd91-b49fac700cd5",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "90eaf137-ca3d-46f0-aa83-fd81cbdcb49a",
+      "items": []
+    },
+    {
+      "id": "a71d94f6-45fb-49dc-aa7a-3ee3a6cdefad",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "bb47c6cd-9bff-4a0c-b1f5-98adac0aa5cb",
+      "items": [
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "01db8b62-b83e-4705-bbbf-cef8769b2174",
+      "items": [
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "998be842-ae0f-4163-bb3d-23a547e47e84",
+      "items": []
+    },
+    {
+      "id": "e7c5d93e-aea2-44a6-aac5-a62481b9b342",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "title": "Muska majica kratak rukav bela",
+          "price": 7,
+          "photo": "./assets/muskamajicakratakrukav2.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "92d19bf7-187d-4eb6-a7a0-910bee98ffe5",
+      "items": [
+        {
+          "id": 1,
+          "title": "Muska majica kratak rukav",
+          "price": 5,
+          "photo": "./assets/muskamajicakratakrukav.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "18878359-8d65-49b8-b63d-99bc0214e189",
+      "items": []
     }
   ]
 }

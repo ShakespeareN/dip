@@ -33,8 +33,6 @@ export class BasketService {
       basket = this.createBasket();
     }
     this.addOrUpdateItem(basket.items, itemToAdd, quantity);
-    // basket.items = this.addOrUpdateItem(basket.items, itemToAdd, quantity);
-    // this.setBasket(basket);
   }
 
 
@@ -59,10 +57,16 @@ export class BasketService {
       basket = this.createBasket();
     }
     if(index === -1){
+      console.log(index);
       itemToAdd.quantity = quantity;
       items.push(itemToAdd);
       basket.items = items;
+      console.log(basket.items.length);
+      if (basket.items.length >1){
+        this.updateBasket(basket);
+      }else{
       this.setBasket(basket);
+      }
     }else{
       items[index].quantity += quantity;
       basket.items = items;
@@ -82,7 +86,7 @@ export class BasketService {
     );
   }
   setBasket(basket: IBasket){
-    return this.http.post("http://localhost:3000/basket", basket).subscribe(
+    return this.http.post(`http://localhost:3000/basket?id=${basket.id}}`, basket).subscribe(
       (response:IBasket) => {
         this.basketSource.next(response);
         this.calculateTotals();
@@ -105,7 +109,7 @@ export class BasketService {
     const foundItemIndex = basket.items.findIndex((x)=> x.id === item.id);
 
     basket.items[foundItemIndex].quantity++;
-    this.setBasket(basket);
+    this.updateBasket(basket);
   }
   decrementItemQuantity(item: IBasketItem){
     const basket = this.getCurrentBasketValue();
@@ -113,7 +117,7 @@ export class BasketService {
 
     if(basket.items[foundItemIndex].quantity>1){
       basket.items[foundItemIndex].quantity--;
-      this.setBasket(basket);
+      this.updateBasket(basket);
     }else{
       this.removeItemFromBasket(item);
     }
@@ -123,15 +127,15 @@ export class BasketService {
     if(basket.items.some(x => x.id === item.id)){
       basket.items = basket.items.filter(i=> i.id != item.id);
       if(basket.items.length > 0){
-        this.setBasket(basket);
+        this.updateBasket(basket);
       }else{
-        this.deleteBasket(basket);
+        this.updateBasket(basket);
       }
     }
   }
 
   deleteBasket(basket:IBasket){
-    return this.http.delete("http://localhost:3000/basket?id=" + basket.id).subscribe(
+    return this.http.delete(`http://localhost:3000/basket?id=${basket.id}`).subscribe(
     ()=>{
       this.basketSource.next(null);
       localStorage.removeItem('basket_id');

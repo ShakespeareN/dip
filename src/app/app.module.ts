@@ -23,7 +23,8 @@ import { ProductPageModule } from './product-page/product-page.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './cart-page/checkout/checkout.component';
+import { CartModule } from './cart-page/cart.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,25 +33,17 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HomepageComponent,
     LoginPageComponent,
     SignupPageComponent,
-    CartPageComponent,
-    CheckoutComponent,
-    // ProductPageComponent,
-    // FilterPipe,
-    // SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule,
-    // FormsModule,
-    // CommonModule,
-    ProductDetailsModule,
+    BrowserAnimationsModule,
     BestSellModule,
+    HttpClientModule,
+    ProductDetailsModule,
     ProductPageModule,
-    ReactiveFormsModule,
-    FormsModule,
+    CartModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   exports:[

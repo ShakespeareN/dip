@@ -6,7 +6,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './cart-page/checkout/checkout.component';
+
 
 
 

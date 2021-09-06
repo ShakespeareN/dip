@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-signup-page',
@@ -10,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class SignupPageComponent implements OnInit {
   addForm: FormGroup;
-
+  messageText: string='';
   constructor(
     private productService: ProductsService,
      private formBuilder: FormBuilder,
@@ -37,15 +38,22 @@ export class SignupPageComponent implements OnInit {
 
       if (isCreated){
         console.log("User sa tim username-om vec postoji!");
-        this.openSnackBar();
+        this.openSnackBar(false);
       }else{
         this.productService.postUser(this.addForm.value).subscribe();
+        this.openSnackBar(true);
       }
     })
 
    }
-   openSnackBar() {
-    this._snackBar.open('Fields not filled', 'OK', {
+   openSnackBar(valid: boolean)
+   {
+    if(valid){
+      this.messageText= "Successfully created user";
+    }else{
+      this.messageText="User with that username already exists";
+    }
+    this._snackBar.open(this.messageText, 'OK', {
       duration: 3000
     });
   }
