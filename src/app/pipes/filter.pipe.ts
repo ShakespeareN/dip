@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { filter } from 'rxjs/operators';
+
 
 @Pipe({
   name: 'filter',
@@ -11,14 +11,6 @@ export class FilterPipe implements PipeTransform {
     if (value === undefined || filterString === '' || propName === '') {
       return value;
     }
-    // if (filterString != ""){
-    //   for (const item of value){
-    //     if (item[propName].includes(filterString)){
-    //       resultSearched.push(item);
-    //     }
-    //   }
-    //   value = resultSearched;
-    // }
     if (propName === 'price') {
       for (const item of value) {
         if (filterString === '1') {

@@ -382,7 +382,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Nikolas",
+      "name": "Nikola",
       "dateofbirth": "17.08.2000.",
       "address": "Gavrila Principa",
       "phone": "324546665",
@@ -451,6 +451,15 @@
       "username": "probaproba",
       "password": "probaproba",
       "id": 8
+    },
+    {
+      "name": "akica",
+      "address": "sremska",
+      "dateofbirth": "2021-09-06T22:00:00.000Z",
+      "phone": "5454654",
+      "username": "aki",
+      "password": "aki98",
+      "id": 9
     }
   ],
   "basket": [
@@ -1608,6 +1617,51 @@
     {
       "id": "18878359-8d65-49b8-b63d-99bc0214e189",
       "items": []
+    },
+    {
+      "id": "18003b7f-374c-4b7e-975e-a8d65205f046",
+      "items": [
+        {
+          "id": 15,
+          "title": "Farmerice zenske",
+          "price": 15,
+          "photo": "./assets/farmericezenske.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 20,
+          "title": "Patike muske",
+          "price": 49.99,
+          "photo": "./assets/patikemuske.jpg",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "a1026a6d-230d-4251-a469-3a303bca81c9",
+      "items": [
+        {
+          "id": 5,
+          "title": "Muska majica kratak rukav teget",
+          "price": 10,
+          "photo": "./assets/muskamajicakratakrukav3.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 6,
+          "title": "Muska majica kratak rukav crvena",
+          "price": 10.99,
+          "photo": "./assets/muskamajicakratakrukav4.jpg",
+          "quantity": 2
+        },
+        {
+          "id": 12,
+          "title": "Farmerice muske",
+          "price": 30,
+          "photo": "./assets/farmericemuske.jpg",
+          "quantity": 1
+        }
+      ]
     }
   ]
 }

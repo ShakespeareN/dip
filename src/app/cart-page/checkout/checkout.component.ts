@@ -35,7 +35,6 @@ export class CheckoutComponent implements OnInit {
       }
     }
     async productsCart(){
-      // this.basketService.getBasket(localStorage.getItem("basket_id"));
       let user:IUserInfo;
       await this.productService.getUser(localStorage.getItem("username")).then(
         data=>{

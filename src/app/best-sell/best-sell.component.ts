@@ -25,10 +25,8 @@ export class BestSellComponent implements OnInit {
   }
   private showProducts():void {
     this.productService.getProducts().subscribe(data => this.products = data.sort((x,y)=>y.sold-x.sold).slice(0, 4));
-  //  this.showBestSll();e
   }
   goToDetails(id: any){
-    // this.router.navigate([`/product-details/${id}`]);
     this.redirectTo(`/product-details/${id}`);
   }
   addToCart(item: IProduct){

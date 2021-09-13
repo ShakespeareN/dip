@@ -32,10 +32,8 @@ export class SignupPageComponent implements OnInit {
     });
   }
   SignUp(): void {
-
     this.productService.getAllUsers().subscribe((data) =>{
       const isCreated = data.some(e => e.username == this.addForm.value.username )
-
       if (isCreated){
         console.log("User sa tim username-om vec postoji!");
         this.openSnackBar(false);
@@ -44,7 +42,6 @@ export class SignupPageComponent implements OnInit {
         this.openSnackBar(true);
       }
     })
-
    }
    openSnackBar(valid: boolean)
    {

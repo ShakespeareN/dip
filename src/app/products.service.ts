@@ -25,15 +25,4 @@ export class ProductsService {
   async getUser(username:string){
      return await this.http.get<IUserInfo>('http://localhost:3000/users?username='+username).toPromise();
   }
-  // getProductss(shopParams: ShopParams){
-  //   let params = new HttpParams();
-
-  //   if (shopParams.type !== 'all'){
-  //     return this.http.get<IProduct[]>('http://localhost:3000/products')
-  //     .subscribe(data =>
-  //        data = data.filter(e=> e.type.includes(shopParams.type))
-  //       )
-  //     ;
-  //   }
-  // }
 }

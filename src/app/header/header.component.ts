@@ -8,7 +8,6 @@ import { BasketService } from '../basket.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, DoCheck {
-  // notLogged: boolean = false;
   logged: boolean = false;
   loggedIn: string = "isLoggedIn";
   productsCount: number=0;
@@ -16,12 +15,10 @@ export class HeaderComponent implements OnInit, DoCheck {
   ngOnInit(): void {
     this.isLoggedIn()
   }
-
   ngDoCheck(): void {
     this.isLoggedIn()
     this.addedProductsCart();
   }
-
   isLoggedIn(){
     if(JSON.parse(localStorage.getItem(this.loggedIn))){
       this.logged = true;
@@ -46,22 +43,4 @@ export class HeaderComponent implements OnInit, DoCheck {
       .navigateByUrl('/', { skipLocationChange: true })
       .then(() => this.router.navigate([uri]));
   }
-  // goToProductPage(gender: string){
-  //   this.redirectTo(`/product-page/${gender}`);
-  //   // this.router.navigate([`/product-page/${gender}`]);
-  // }
-  // goToHomePage(){
-  //   this.router.navigate(['']);
-  // }
-  // logOut(): void {
-  //   localStorage.removeItem('isLoggedIn');
-  //   this.router.navigate(['/login-page']);
-  //   this.correctPath = false;
-  // }
-  // logIn():void{
-  //   this.router.navigate(['/login-page']);
-  // }
-  // signUp():void{
-  //   this.router.navigate(['/signup-page']);
-  // }
 }

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../interface/iproduct';
 import { BasketService } from '../basket.service';
-import { IBasketItem } from '../interface/iBakset';
+
 
 @Component({
   selector: 'app-product-details',
@@ -44,10 +44,4 @@ export class ProductDetailsComponent implements OnInit {
   addItemToBasket(){
     this.basketService.addItemToBasket(this.product, this.productQuantity);
   }
-  // redirectTo(uri: string) {
-  //   this.router
-  //     .navigateByUrl('/', { skipLocationChange: true })
-  //     .then(() => this.router.navigate([uri]));
-  // }
-
 }
